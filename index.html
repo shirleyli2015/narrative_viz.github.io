@@ -38,7 +38,7 @@ body {font-size:16px;}
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<!-- <div class="w3-main" style="margin-left:340px;margin-right:40px"> -->
   <!-- bar_chart -->
   <div class="w3-container" id="bar_chart" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>bar chart.</b></h1>
@@ -54,9 +54,9 @@ body {font-size:16px;}
 <div id="my_dataviz"></div>
 <script>
 // set the dimensions and margins of the graph
-const margin = {top: 30, right: 30, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+const margin = {top: 30, right: 300, bottom: 150, left: 100},
+    width = 900 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz")
@@ -66,9 +66,16 @@ const svg = d3.select("#my_dataviz")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+    svg.append("text")
+       .attr("transform", "translate(0,0)")
+       .attr("x", 30)
+       .attr("y", -10)
+       .attr("font-size", "24px")
+       .text("Average Calories per Serving")
+
 // Parse the Data
 d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_1.csv").then ( function(data) {
-  console.log(data[1])
+
   // sort data
   data.sort(function(b, a) {
     return a.Value - b.Value;
@@ -77,7 +84,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
   // X axis
   const x = d3.scaleBand()
     .range([ 0, width ])
-    .domain(data.map(d => d.Country))
+    .domain(data.map(d => d.Food_Category))
     .padding(0.2);
   svg.append("g")
     .attr("transform", `translate(0, ${height})`)
@@ -88,24 +95,45 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
 
   // Add Y axis
   const y = d3.scaleLinear()
-    .domain([0, 13000])
+    .domain([0,700])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
-
+         
+  svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("x", width/2+20)
+      .attr("y", height + margin.top + 75)
+      .text("Food Category");
+   // Y axis label:
+  svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -margin.left+60)
+      .attr("x", -margin.top)
+      .text("Calories");
   // Bars
-  svg.selectAll("mybar")
+  var bar = svg.selectAll("mybar")
     .data(data)
     .enter()
-    .append("rect")
-      .attr("x", d => x(d.Country))
-      .attr("y", d => y(d.Value))
+    .append("g");
+              
+    bar.append("rect")
+      .attr("x", d => x(d.Food_Category))
+      .attr("y", d => y(d.Avg_Cal_per_Serving))
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d.Value))
-      .attr("fill", "#69b3a2")
+      .attr("height", d => height - y(d.Avg_Cal_per_Serving))
+      .attr("fill", "#69b3a2");     
+      
+    bar.append("text")
+        .attr("x", function (d) { return x(d.Food_Category)+15; })
+        .attr("y", function (d) { return y(d.Avg_Cal_per_Serving) - 10; })
+        .attr("dy", ".5em")
+        .text(function (d) { return Math.round(d.Avg_Cal_per_Serving); })
+        .style("font-size", "10px");
 
+    
 })
-
 </script>
 </body></html>
   <!-- scatter_plot -->
@@ -141,12 +169,12 @@ var Svg = d3.select("#my_dataviz2")
 
 
 
-//Read the data
-d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_2.csv", function(data) {
 
+d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_2.csv", function(data) {
+	console.log(data[1])
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([4*0.95, 8*1.001])
+    .domain([0, 1000])
     .range([ 0, width ])
   Svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -155,7 +183,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([-0.001, 9*1.01])
+    .domain([0, 100])
     .range([ height, 0])
     .nice()
   Svg.append("g")
@@ -182,8 +210,8 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
 
   // Color scale: give me a specie name, I return a color
   var color = d3.scaleOrdinal()
-    .domain(["setosa", "versicolor", "virginica" ])
-    .range([ "#402D54", "#D18975", "#8FD175"])
+    .domain(["Beans and Lentils", "Vegetables", "Fruits","Grains and Pasta", "Nuts and Seeds", "Fish","Dairy and Egg Products","Meats", "Fats and Oils" ])
+    .range([ "#00CC00","#00CC00","#00CC00", "#00CC00","#00CC00","#CC0000", "#CC0000","#CC0000","#8FD175"])
 
   // Add dots
   Svg.append('g')
@@ -191,10 +219,43 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
     .data(data)
     .enter()
     .append("circle")
-      .attr("cx", function (d) { return x(d.Sepal_Length); } )
-      .attr("cy", function (d) { return y(d.Petal_Length); } )
-      .attr("r", 5)
-      .style("fill", function (d) { return color(d.Species) } )
+      .attr("cx", function (d) { return x(d.Calories); } )
+      .attr("cy", function (d) { return y(d.Protein); } )
+      .attr("r", 1)
+      .style("fill", function (d) { return color(d.Calories) } )
+      
+      
+  // create a list of keys
+var keys = ["Plant-based", "Animal Products", "Fats/Oils"]
+
+// Usually you have a color scale in your chart already
+var color = d3.scaleOrdinal()
+  .domain(keys)
+  .range(d3.schemeSet1);
+
+// Add one dot in the legend for each name.
+var size = 20
+Svg.selectAll("mydots")
+  .data(keys)
+  .enter()
+  .append("rect")
+    .attr("x", 560)
+    .attr("y", function(d,i){ return i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("width", size)
+    .attr("height", size)
+    .style("fill", function(d){ return color(d)})
+
+// Add one dot in the legend for each name.
+Svg.selectAll("mylabels")
+  .data(keys)
+  .enter()
+  .append("text")
+    .attr("x", 560 + size*1.2)
+    .attr("y", function(d,i){ return i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .style("fill", function(d){ return color(d)})
+    .text(function(d){ return d})
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle")
 
 })
 
@@ -204,127 +265,121 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
     <h1 class="w3-xxxlarge w3-text-red"><b>bubble_chart.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Some text our prices.</p>
+
 <!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v6.js"></script>
 
-<!-- Color palette -->
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<div class="w3-container" id="bubble_chart" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>bubble_chart.</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <p>Some text our prices.</p>
 
-<style>
-.node:hover{
-  stroke-width: 7px !important;
-  opacity: 1 !important;
-}
-</style>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+        
 
 <script>
-
-// set the dimensions and margins of the graph
-//var width = 460
-//var height = 460
-
-// append the svg object to the body of the page
-var chart = d3.select("#bubble_chart")
-  .append("svg")
-    .attr("width", 460)
-    .attr("height", 460)
+// append the svg3 object to the body of the page
+const svg3 = d3.select("#bubble_chart")
+.append("svg")
+  .attr("width", 460)
+  .attr("height", 460)
 
 // Read data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/11_SevCatOneNumNestedOneObsPerGroup.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/11_SevCatOneNumNestedOneObsPerGroup.csv").then( function(data) {
 
-  // Filter a bit the data -> more than 1 million inhabitants
-  data = data.filter(function(d){ return d.value>10000000 })
+// Filter a bit the data -> more than 1 million inhabitants
+data = data.filter(function(d){ return d.value>10000000 })
 
-  // Color palette for continents?
-  var color = d3.scaleOrdinal()
-    .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"])
-    .range(d3.schemeSet1);
+// Color palette for continents?
+const color = d3.scaleOrdinal()
+  .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"])
+  .range(d3.schemeSet1);
 
-  // Size scale for countries
-  var size = d3.scaleLinear()
-    .domain([0, 1400000000])
-    .range([7,55])  // circle will be between 7 and 55 px wide
+// Size scale for countries
+const size = d3.scaleLinear()
+  .domain([0, 1400000000])
+  .range([7,55])  // circle will be between 7 and 55 px wide
 
-  // create a tooltip
-  var Tooltip = d3.select("#my_dataviz")
-    .append("div")
+// create a tooltip
+const Tooltip = d3.select("#my_dataviz")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "2px")
+  .style("border-radius", "5px")
+  .style("padding", "5px")
+
+// Three function that change the tooltip when user hover / move / leave a cell
+const mouseover = function(event, d) {
+  Tooltip
+    .style("opacity", 1)
+}
+const mousemove = function(event, d) {
+  Tooltip
+    .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
+    .style("left", (event.x/2+20) + "px")
+    .style("top", (event.y/2-30) + "px")
+}
+var mouseleave = function(event, d) {
+  Tooltip
     .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
+}
 
-  // Three function that change the tooltip when user hover / move / leave a cell
-  var mouseover = function(d) {
-    Tooltip
-      .style("opacity", 1)
-  }
-  var mousemove = function(d) {
-    Tooltip
-      .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
-      .style("left", (d3.mouse(this)[0]+20) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
-  }
-  var mouseleave = function(d) {
-    Tooltip
-      .style("opacity", 0)
-  }
+// Initialize the circle: all located at the center of the svg3 area
+var node = svg3.append("g")
+  .selectAll("circle")
+  .data(data)
+  .join("circle")
+    .attr("class", "node")
+    .attr("r", d => size(d.value))
+    .attr("cx", width / 2)
+    .attr("cy", height / 2)
+    .style("fill", d => color(d.region))
+    .style("fill-opacity", 0.8)
+    .attr("stroke", "black")
+    .style("stroke-width", 1)
+    .on("mouseover", mouseover) // What to do when hovered
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+    .call(d3.drag() // call specific function when circle is dragged
+         .on("start", dragstarted)
+         .on("drag", dragged)
+         .on("end", dragended));
 
-  // Initialize the circle: all located at the center of the svg area
-  var node = chart.append("g")
-    .selectAll("circle")
-    .data(data)
-    .enter()
-    .append("circle")
-      .attr("class", "node")
-      .attr("r", function(d){ return size(d.value)})
-      .attr("cx", width / 2)
-      .attr("cy", height / 2)
-      .style("fill", function(d){ return color(d.region)})
-      .style("fill-opacity", 0.8)
-      .attr("stroke", "black")
-      .style("stroke-width", 1)
-      .on("mouseover", mouseover) // What to do when hovered
-      .on("mousemove", mousemove)
-      .on("mouseleave", mouseleave)
-      .call(d3.drag() // call specific function when circle is dragged
-           .on("start", dragstarted)
-           .on("drag", dragged)
-           .on("end", dragended));
+// Features of the forces applied to the nodes:
+const simulation = d3.forceSimulation()
+    .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+    .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+    .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
 
-  // Features of the forces applied to the nodes:
-  var simulation = d3.forceSimulation()
-      .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-      .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
-      .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
+// Apply these forces to the nodes and update their positions.
+// Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+simulation
+    .nodes(data)
+    .on("tick", function(d){
+      node
+          .attr("cx", d => d.x)
+          .attr("cy", d => d.y)
+    });
 
-  // Apply these forces to the nodes and update their positions.
-  // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
-  simulation
-      .nodes(data)
-      .on("tick", function(d){
-        node
-            .attr("cx", function(d){ return d.x; })
-            .attr("cy", function(d){ return d.y; })
-      });
-
-  // What happens when a circle is dragged?
-  function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(.03).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  }
-  function dragged(d) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
-  }
-  function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(.03);
-    d.fx = null;
-    d.fy = null;
-  }
+// What happens when a circle is dragged?
+function dragstarted(event, d) {
+  if (!event.active) simulation.alphaTarget(.03).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+function dragended(event, d) {
+  if (!event.active) simulation.alphaTarget(.03);
+  d.fx = null;
+  d.fy = null;
+}
 
 })
 
