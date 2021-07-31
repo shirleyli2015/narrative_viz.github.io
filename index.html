@@ -67,7 +67,7 @@ const svg = d3.select("#my_dataviz")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Parse the Data
-d3.csv("/Data/MyFoodData_Nutrition_Facts_SpreadSheet_1.csv").then ( function(data) {
+d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_1.csv").then ( function(data) {
   console.log(data[1])
   // sort data
   data.sort(function(b, a) {
