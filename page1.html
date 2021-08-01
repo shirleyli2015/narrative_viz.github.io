@@ -13,21 +13,21 @@ body {font-size:16px;}
 <body>
   <div id="bar_chart" style="margin-top:75px">
     <h1 ><b>A Look at Plant-Based Diets</b></h1>
-    <h2 ><b>Calories</b></h2>
+    <h2 ><b>Average Protein (g) in Food Categories</b></h2>
     <p>Fruits and vegetables are lower in calories, and are consumed heavily as a part of a plant-based diet. Eating more fresh fruits and vegetables as a part of a normal diet is a great way to lose weight.</p>
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v6.js"></script>
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
 <script>
-const type = d3.annotationCalloutElbow
+const type = d3.annotationCalloutCircle
 const annotations = [{
-    note: { label: "Fruits and Vegetables are low in calories" },
-    x: 50,
-    y: 270,
+    note: { label: "Fruits and Vegetables are low in protein" },
+    x: 65,
+    y: 290,
     dy: -100,
-    dx: 150,
-    subject: { radius: 50, radiusPadding: 10 },
+    dx: 0,
+    subject: { radius: 60, radiusPadding: 10 },
   },]
 const makeAnnotations = d3.annotation()
   .type(type)
@@ -52,7 +52,7 @@ const svg = d3.select("#bar_chart")
        .attr("x", 30)
        .attr("y", -10)
        .attr("font-size", "24px")
-       .text("Average Calories per Serving")
+       .text("Protein Amount in Food Categories")
 
 d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_1.csv").then ( function(data) {
 
@@ -72,7 +72,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
       .style("text-anchor", "end");
 
   const y = d3.scaleLinear()
-    .domain([0,700])
+    .domain([0,25])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -88,7 +88,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
       .attr("transform", "rotate(-90)")
       .attr("y", -margin.left+60)
       .attr("x", -margin.top)
-      .text("Calories");
+      .text("Average Protein (g) per Serving");
 
   var bar = svg.selectAll("mybar")
     .data(data)
