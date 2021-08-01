@@ -97,16 +97,16 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
               
     bar.append("rect")
       .attr("x", d => x(d.Food_Category))
-      .attr("y", d => y(d.Avg_Cal_per_Serving))
+      .attr("y", d => y(d['Average of Protein (g)']))
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d.Avg_Cal_per_Serving))
+      .attr("height", d => height - y(d['Average of Protein (g)']))
       .attr("fill", "#69b3a2");     
       
     bar.append("text")
         .attr("x", function (d) { return x(d.Food_Category)+15; })
-        .attr("y", function (d) { return y(d.Avg_Cal_per_Serving) - 10; })
+        .attr("y", function (d) { return y(d['Average of Protein (g)']) - 10; })
         .attr("dy", ".5em")
-        .text(function (d) { return Math.round(d.Avg_Cal_per_Serving); })
+        .text(function (d) { return Math.round(d['Average of Protein (g)']); })
         .style("font-size", "10px");
 })
 </script>
