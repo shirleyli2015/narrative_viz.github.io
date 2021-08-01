@@ -37,7 +37,6 @@ const annotations2 = [{
     subject: { radius: 130, radiusPadding: 10 },
   }]
 
-
 const makeAnnotations2 = d3.annotation()
   .notePadding(15)
   .type(type2)
@@ -53,8 +52,7 @@ var Svg = d3.select("#scatter_plot")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")")
-    ;
+          "translate(" + margin.left + "," + margin.top + ")");
 
 
 d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_2.csv", function(data) {
