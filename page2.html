@@ -12,11 +12,11 @@ body {font-size:16px;}
 
 
 <body>
-  <!-- scatter_plot -->
-  <div class="w3-container" id="scatter_plot" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Protein Content</b></h1>
-    <p>Because people associate a plant-based diet with mostly fruits, vegetables, and grains, many hesitate to adopt a plant-based diet due to concerns about getting adequate protein intake. While we do see that there are more foods with higher protein content in animal-based foods, there are actually quite a few high protein plant-based options.</p>
-  </div>
+    <div id="scatter_plot" style="margin-top:75px">
+        <h1 ><b>A Look at Plant-Based Diets</b></h1>
+        <h2 ><b>Protein Content</b></h2>
+        <p>Because people associate a plant-based diet with mostly fruits, vegetables, and grains, many hesitate to adopt a plant-based diet due to concerns about getting adequate protein intake. While we do see that there are more foods with higher protein content in animal-based foods, there are actually quite a few high protein plant-based options.</p>
+    </div>
   
   <!DOCTYPE html>
 <meta charset="utf-8">
@@ -39,21 +39,8 @@ const annotations2 = [{
 
 
 const makeAnnotations2 = d3.annotation()
-  .editMode(true)
-  //also can set and override in the note.padding property
-  //of the annotation object
   .notePadding(15)
   .type(type2)
-  //accessors & accessorsInverse not needed
-  //if using x, y in annotations JSON
-  .accessors({
-    x: d => x(parseTime(d.date)),
-    y: d => y(d.close)
-  })
-  .accessorsInverse({
-     date: d => timeFormat(x.invert(d.x)),
-     close: d => y.invert(d.y)
-  })
   .annotations(annotations2)
   
 const margin = {top: 30, right: 300, bottom: 150, left: 100},
@@ -163,5 +150,5 @@ Svg.selectAll("mylabels")
 </script>
 </body>
 <button type="button" onclick="location.href='https://shirleyli2015.github.io/narrative_viz.github.io/page1.html';">Previous</button>
-<button type="button" onclick="location.href='https://shirleyli2015.github.io/narrative_viz.github.io/page3.html';">Next</button>
+<button type="button" onclick="location.href='https://shirleyli2015.github.io/narrative_viz.github.io/page.html';">Next</button>
 </html>
