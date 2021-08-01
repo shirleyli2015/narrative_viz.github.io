@@ -12,9 +12,9 @@ body {font-size:16px;}
 
 <body>
   <div id="bar_chart" style="margin-top:75px">
-    <h1 ><b>A Look at Plant-Based Diets</b></h1>
-    <h2 ><b>Average Protein (g) in Food Categories</b></h2>
-    <p>Fruits and vegetables are lower in calories, and are consumed heavily as a part of a plant-based diet. Eating more fresh fruits and vegetables as a part of a normal diet is a great way to lose weight.</p>
+    <h1 ><b>Protein in Plant-Based Diets</b></h1>
+    <h2 ><b>You just eat plants... right?</b></h2>
+    <p>Many people associate a plant-based diet with just eating fruits, vegetables, and grains. While fruits and vegetables are lower in calories and high in vitamins, they are low in protein. This causes some people to be hesitant to adopt a plant-based diet because of concerns of getting adequate protein intake without eating meat.</p>
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v6.js"></script>
 <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
@@ -22,13 +22,13 @@ body {font-size:16px;}
 <script>
 const type = d3.annotationCalloutCircle
 const annotations = [{
-    note: { label: "Fruits and Vegetables are low in protein" },
-    x: 65,
-    y: 290,
+    note: { label: "Fruits, vegetables, and grains are lower in protein" },
+    x: 95,
+    y: 260,
     dy: -100,
     dx: 0,
-    subject: { radius: 60, radiusPadding: 10 },
-  },]
+    subject: { radius: 95, radiusPadding: 10 },
+  }]
 const makeAnnotations = d3.annotation()
   .type(type)
   .annotations(annotations)
@@ -43,9 +43,8 @@ const svg = d3.select("#bar_chart")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`)
-    .attr("class", "annotation-group")
-          .call(makeAnnotations);
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    
 
     svg.append("text")
        .attr("transform", "translate(0,0)")
@@ -108,6 +107,9 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
         .attr("dy", ".5em")
         .text(function (d) { return Math.round(d['Average of Protein (g)']); })
         .style("font-size", "10px");
+
+    bar.append("svg").attr("class", "annotation-group")
+          .call(makeAnnotations);
 })
 </script>
   </div>

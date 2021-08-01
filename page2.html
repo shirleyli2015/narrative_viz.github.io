@@ -14,8 +14,8 @@ body {font-size:16px;}
 <body>
     <div id="scatter_plot" style="margin-top:75px">
         <h1 ><b>A Look at Plant-Based Diets</b></h1>
-        <h2 ><b>Protein Content</b></h2>
-        <p>Because people associate a plant-based diet with mostly fruits, vegetables, and grains, many hesitate to adopt a plant-based diet due to concerns about getting adequate protein intake. While we do see that there are more foods with higher protein content in animal-based foods, there are actually quite a few high protein plant-based options.</p>
+        <h2 ><b>High Protein Content Foods</b></h2>
+        <p> While we do see that there are more animal-based foods with higher protein content in the 10-35 grams of proten per serving range, there are actually almost equal numbers of options of high protein foods in the 40-90 grams per serving range.</p>
     </div>
   
   <!DOCTYPE html>
@@ -112,12 +112,12 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
       
       
   // create a list of keys
-var keys = ["Plant-based", "Animal Products", "Fats/Oils"]
+var keys = ["Plant-based", "Animal Products"]
 
 // Usually you have a color scale in your chart already
 var color = d3.scaleOrdinal()
   .domain(keys)
-  .range(["#00CC00","#CC0000" ,"#C0C0C0"]);
+  .range(["#00CC00","#CC0000"]);
 
 // Add one dot in the legend for each name.
 var size = 20
