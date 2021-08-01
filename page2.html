@@ -1,0 +1,165 @@
+<html lang="en">
+<title>Protein Sources in Plant-Based Diets</title>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+
+<body>
+  <!-- scatter_plot -->
+  <div class="w3-container" id="scatter_plot" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Protein Content</b></h1>
+    <p>Because people associate a plant-based diet with mostly fruits, vegetables, and grains, many hesitate to adopt a plant-based diet due to concerns about getting adequate protein intake. While we do see that there are more foods with higher protein content in animal-based foods, there are actually quite a few high protein plant-based options.</p>
+  </div>
+  
+  <!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+<script>
+
+const type2 = d3.annotationCalloutCircle
+
+const annotations2 = [{
+    note: { label: "High protein plant-based options exist!" },
+    x: 330,
+    y: 200,
+    dy: -50,
+    dx: 150,
+    subject: { radius: 130, radiusPadding: 10 },
+  }]
+
+
+const makeAnnotations2 = d3.annotation()
+  .editMode(true)
+  //also can set and override in the note.padding property
+  //of the annotation object
+  .notePadding(15)
+  .type(type2)
+  //accessors & accessorsInverse not needed
+  //if using x, y in annotations JSON
+  .accessors({
+    x: d => x(parseTime(d.date)),
+    y: d => y(d.close)
+  })
+  .accessorsInverse({
+     date: d => timeFormat(x.invert(d.x)),
+     close: d => y.invert(d.y)
+  })
+  .annotations(annotations2)
+  
+const margin = {top: 30, right: 300, bottom: 150, left: 100},
+    width = 900 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+    
+var Svg = d3.select("#scatter_plot")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")")
+    ;
+
+
+d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_2.csv", function(data) {
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([0, 100])
+    .range([ 0, width ])
+  Svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickSize(-height*1.3).ticks(10))
+    .select(".domain").remove()
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 1000])
+    .range([ height, 0])
+    .nice()
+  Svg.append("g")
+    .call(d3.axisLeft(y).tickSize(-width*1.3).ticks(7))
+    .select(".domain").remove()
+
+  // Customization
+  Svg.selectAll(".tick line").attr("stroke", "#EBEBEB")
+
+  // Add X axis label:
+  Svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("x", width - 150)
+      .attr("y", height + margin.top + 10)
+      .text("Protein (g)");
+
+  // Y axis label:
+  Svg.append("text")
+      .attr("text-anchor", "end")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -margin.left+60)
+      .attr("x", -margin.top - 90)
+      .text("Calories")
+
+  // Color scale: give me a specie name, I return a color
+  var color = d3.scaleOrdinal()
+    .domain(["Beans and Lentils", "Vegetables", "Fruits","Grains and Pasta", "Nuts and Seeds", "Fish","Dairy and Egg Products","Meats", "Fats and Oils" ])
+    .range([ "#00CC00","#00CC00","#00CC00", "#00CC00","#00CC00","#CC0000", "#CC0000","#CC0000","#C0C0C0"])
+
+  // Add dots
+  Svg.append('g')
+  .attr("class", "annotation-group")
+    .call(makeAnnotations2)
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.Protein); } )
+      .attr("cy", function (d) { return y(d.Calories); } )
+      .attr("r", 1)
+      .style("fill", function (d) { return color(d.Food_Group) } )
+      
+      
+  // create a list of keys
+var keys = ["Plant-based", "Animal Products", "Fats/Oils"]
+
+// Usually you have a color scale in your chart already
+var color = d3.scaleOrdinal()
+  .domain(keys)
+  .range(["#00CC00","#CC0000" ,"#C0C0C0"]);
+
+// Add one dot in the legend for each name.
+var size = 20
+Svg.selectAll("mydots")
+  .data(keys)
+  .enter()
+  .append("rect")
+    .attr("x", 560)
+    .attr("y", function(d,i){ return i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("width", size)
+    .attr("height", size)
+    .style("fill", function(d){ return color(d)})
+
+// Add one dot in the legend for each name.
+Svg.selectAll("mylabels")
+  .data(keys)
+  .enter()
+  .append("text")
+    .attr("x", 560 + size*1.2)
+    .attr("y", function(d,i){ return i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .style("fill", function(d){ return color(d)})
+    .text(function(d){ return d})
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle")
+
+})
+
+</script>
+</body>
+</html>

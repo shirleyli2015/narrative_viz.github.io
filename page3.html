@@ -1,0 +1,173 @@
+<html lang="en">
+<title>Protein Sources in Plant-Based Diets</title>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+
+<body>  <!DOCTYPE html>
+<meta charset="utf-8">
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+ <div class="w3-container" id="bubble_chart" style="margin-top:75px">
+    <h1><b>High Protein Plant-Based Foods</b></h1>
+    <p>Although vegetables and fruits may lack substantiative protein content, there are many plant based foods that are actually protein rich (many of which are beans/lentils or nuts/seeds). There are also plant-based protein powders, meat and cheese replacements available at grocery stores in most major cities. The options for plant-based protein are plentiful and tasty! Try hovering over one of the circle to see the nutrition facts of some of the foods with highest protein content.</p>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+        
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+const margin = {top: 30, right: 300, bottom: 150, left: 100},
+    width = 900 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+// append the svg3 object to the body of the page
+const svg3 = d3.select("#bubble_chart")
+.append("svg")
+  .attr("width", 1500)
+  .attr("height", 500)
+
+// Read data
+d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_3.csv").then( function(data) {
+
+// Filter a bit the data -> more than 1 million inhabitants
+data = data.filter(function(d){ return d['Protein (g)'] })
+
+// Color palette for continents?
+const color = d3.scaleOrdinal()
+  .domain(["Beans and Lentils", "Vegetables", "Fruits","Grains and Pasta", "Nuts and Seeds"])
+  .range(["#aaaa55", "#69b3a2", "#ff8080", "#ffd24d", "#b33c00"]);
+
+// Size scale for countries
+const size = d3.scaleLinear()
+  .domain([0, 150])
+  .range([1,55])  // circle will be between 7 and 55 px wide
+
+// create a tooltip
+const Tooltip = d3.select("#bubble_chart")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "2px")
+  .style("border-radius", "5px")
+  .style("padding", "5px")
+
+// Three function that change the tooltip when user hover / move / leave a cell
+const mouseover = function(event, d) {
+  Tooltip
+    .style("opacity", 1)
+}
+const mousemove = function(event, d) {
+  Tooltip
+    .html('<u>' + d.Name + '</u>' + "<br>" + d.Calories + " Calories" + "<br>" + d['Protein (g)'] +' (g) protein')
+    .style("right", (event.x/2+20) + "px")
+    .style("top", (event.y/2-30) + "px")
+}
+var mouseleave = function(event, d) {
+  Tooltip
+    .style("opacity", 0)
+}
+
+// Initialize the circle: all located at the center of the svg3 area
+var node = svg3.append("g")
+  .attr("transform",
+          "translate(" + margin.left + "," + 100 + ")")
+  .selectAll("circle")
+  .data(data)
+  .join("circle")
+    .attr("class", "node")
+    .attr("r", d => size(d['Protein (g)']))
+    .attr("cx", width)
+    .attr("cy", height)
+    .style("fill", d => color(d.Food_Group))
+    .style("fill-opacity", 0.6)
+    .attr("stroke", "black")
+    .style("stroke-width", 1)
+    .on("mouseover", mouseover) // What to do when hovered
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+    .call(d3.drag() // call specific function when circle is dragged
+         .on("start", dragstarted)
+         .on("drag", dragged)
+         .on("end", dragended));
+
+// Features of the forces applied to the nodes:
+const simulation = d3.forceSimulation()
+    .force("center", d3.forceCenter().x(width/2).y(height/2)) // Attraction to the center of the svg area
+    .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+    .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d['Protein (g)'])+3) }).iterations(1)) // Force that avoids circle overlapping
+
+// Apply these forces to the nodes and update their positions.
+// Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+simulation
+    .nodes(data)
+    .on("tick", function(d){
+      node
+          .attr("cx", d => d.x)
+          .attr("cy", d => d.y)
+    });
+
+// What happens when a circle is dragged?
+function dragstarted(event, d) {
+  if (!event.active) simulation.alphaTarget(.03).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+function dragended(event, d) {
+  if (!event.active) simulation.alphaTarget(.03);
+  d.fx = null;
+  d.fy = null;
+}
+
+  // create a list of keys
+  var plants = ["Beans and Lentils", "Vegetables", "Fruits","Grains and Pasta", "Nuts and Seeds"]
+
+// Usually you have a color scale in your chart already
+var color2 = d3.scaleOrdinal()
+  .domain(plants)
+  .range(["#aaaa55", "#69b3a2", "#ff8080", "#ffd24d", "#b33c00"]);
+
+// Add one dot in the legend for each name.
+var size2 = 20
+svg3.selectAll("mydots")
+  .data(plants)
+  .enter()
+  .append("rect")
+    .attr("x", 560)
+    .attr("y", function(d,i){ return i*(size2+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("width", size2)
+    .attr("height", size2)
+    .style("fill", function(d){ return color2(d)})
+
+// Add one dot in the legend for each name.
+svg3.selectAll("mylabels")
+  .data(plants)
+  .enter()
+  .append("text")
+    .attr("x", 560 + size2*1.2)
+    .attr("y", function(d,i){ return i*(size2+5) + (size2/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .style("fill", function(d){ return color2(d)})
+    .text(function(d){ return d})
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle")
+})
+
+</script>
+  </div>
+</body>
+</html>
