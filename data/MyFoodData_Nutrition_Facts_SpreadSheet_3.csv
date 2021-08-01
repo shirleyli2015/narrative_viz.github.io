@@ -1,0 +1,200 @@
+﻿Name,Food_Group,Calories,Fat (g),Protein (g),Carbohydrate (g),Sugars (g),Fiber (g),Cholesterol (mg),Saturated Fats (g),Calcium (mg),"Iron, Fe (mg)","Potassium, K (mg)",Magnesium (mg),"Vitamin A, IU (IU)","Vitamin A, RAE (mcg)",Vitamin C (mg),Vitamin B-12 (mcg),Vitamin D (mcg),Vitamin E (Alpha-Tocopherol) (mg)
+Soy Protein Powder (Isolate),Beans and Lentils,335,3.39,88.32,0,0,0,0,0.422,178,14.5,81,39,0,0,0,0,0,0
+Soy Protein Isolate Potassium Type,Beans and Lentils,321,0.53,88.32,2.59,0,0,0,0.077,178,14.5,1590,39,0,0,0,0,0,0
+Vital Wheat Gluten,Grains and Pasta,370,1.85,75.16,13.79,0,0.6,0,0.272,142,5.2,100,25,0,0,0,0,0,0
+Soy Protein Concentrate Produced By Alcohol Extraction,Beans and Lentils,328,0.46,63.63,25.41,20,5.5,0,0.052,363,10.78,2202,315,0,0,0,0,0,0
+Soy Protein Concentrate Produced By Acid Wash,Beans and Lentils,328,0.46,63.63,25.41,20,5.5,0,0.052,363,10.78,450,140,0,0,0,0,0,NULL
+Dried Spirulina Seaweed,Vegetables,290,7.72,57.47,23.9,3.1,3.6,0,2.65,120,28.5,1363,195,570,29,10.1,0,0,5
+Tofu Dried-Frozen (Koyadofu),Beans and Lentils,477,30.34,52.47,10.03,NULL,7.2,0,4.388,364,9.73,20,59,518,26,0.7,0,0,NULL
+Tofu Dried-Frozen (Koyadofu) Prepared With Calcium Sulfate,Beans and Lentils,470,30.34,52.43,8.3,NULL,1.2,0,4.388,2134,9.73,20,181,0,0,0.7,0,0,NULL
+Peanut Flour Defatted,Beans and Lentils,327,0.55,52.2,34.7,8.22,15.8,0,0.063,140,2.1,1290,370,0,0,0,0,0,0.05
+Soy Flour Defatted,Beans and Lentils,327,1.22,51.46,33.92,16.42,17.5,0,0.136,241,9.24,2384,290,40,2,0,0,0,0.12
+Seeds Sesame Flour Low-Fat,Nuts and Seeds,333,1.75,50.14,35.51,NULL,NULL,0,0.201,149,14.22,397,338,64,3,0,0,0,NULL
+Seeds Cottonseed Flour Low Fat (Glandless),Nuts and Seeds,332,1.41,49.83,36.1,NULL,NULL,0,0.31,474,12.58,1761,716,432,22,2.4,0,0,NULL
+Soy Flour Low-Fat,Beans and Lentils,372,8.9,49.81,30.63,9.33,16,0,1.29,285,8.2,2090,285,40,2,0,0,0,0.55
+Soy Meal Defatted Raw,Beans and Lentils,337,2.39,49.2,35.89,NULL,NULL,0,0.268,244,13.7,2490,306,40,2,0,0,0,NULL
+Seeds Cottonseed Meal Partially Defatted (Glandless),Nuts and Seeds,367,4.77,49.1,38.43,NULL,NULL,0,1.207,504,13.35,1869,760,458,23,2.5,0,0,NULL
+Seeds Sunflower Seed Flour Partially Defatted,Nuts and Seeds,326,1.61,48.06,35.83,NULL,5.2,0,0.138,114,6.62,67,346,49,2,1.3,0,0,NULL
+Dry-Roasted Soybeans,Beans and Lentils,449,21.62,43.32,28.98,NULL,8.1,0,3.127,140,3.95,1364,228,0,0,4.6,0,0,NULL
+Meat Extender,Beans and Lentils,311,2.97,41.71,34.71,NULL,17.5,0,0.424,204,11.99,1902,216,32,2,0,6,0,NULL
+Seeds Cottonseed Flour Partially Defatted (Glandless),Nuts and Seeds,359,6.2,40.96,40.54,NULL,3,0,1.588,478,12.66,1772,721,434,22,2.4,0,0,NULL
+Seeds Sesame Flour Partially Defatted,Nuts and Seeds,382,11.89,40.32,35.14,NULL,NULL,0,1.634,150,14.3,425,362,69,3,0,0,0,NULL
+Soybeans Mature Seeds Roasted Salted,Beans and Lentils,469,25.4,38.55,30.22,4.2,17.7,0,3.674,138,3.9,1470,145,200,10,2.2,0,0,0.91
+Soybeans Mature Seeds Roasted No Salt Added,Beans and Lentils,469,25.4,38.55,30.22,NULL,17.7,0,3.674,138,3.9,1470,145,0,0,2.2,0,0,NULL
+Soy Flour Full-Fat Roasted,Beans and Lentils,439,21.86,38.09,30.38,7.61,9.7,0,3.162,188,5.82,2041,369,122,6,0,0,0,1.98
+Soy Flour Full-Fat Raw,Beans and Lentils,434,20.65,37.81,31.92,7.5,9.6,0,2.987,206,6.37,2515,429,120,6,0,0,0,1.95
+Soybeans Mature Seeds Raw,Beans and Lentils,446,19.94,36.49,30.16,7.33,9.3,0,2.884,277,15.7,1797,280,22,1,6,0,0,0.85
+Lupins Mature Seeds Raw,Beans and Lentils,371,9.74,36.17,40.37,NULL,18.9,0,1.156,176,4.36,1013,198,0,0,4.8,0,0,NULL
+Seeds Safflower Seed Meal Partially Defatted,Nuts and Seeds,342,2.39,35.62,48.73,NULL,NULL,0,0.207,77,4.86,68,350,49,2,0,0,0,NULL
+Peanut Flour Low Fat,Beans and Lentils,428,21.9,33.8,31.27,NULL,15.8,0,3.04,130,4.74,1358,48,0,0,0,0,0,NULL
+Seeds Cottonseed Kernels Roasted (Glandless),Nuts and Seeds,506,36.29,32.59,21.9,NULL,5.5,0,9.699,100,5.4,1350,440,442,22,9,0,0,NULL
+Bacon Bits Meatless,Beans and Lentils,476,25.9,32,28.6,0,10.2,0,4.055,101,0.72,145,95,0,0,1.9,1.2,0,6.9
+Hemp Seeds,Nuts and Seeds,553,48.75,31.56,8.67,1.5,4,0,4.6,70,7.95,1200,700,11,1,0.5,NULL,NULL,0.8
+Freeze-Dried Parsley,Vegetables,271,5.2,31.3,42.38,NULL,32.7,0,NULL,176,53.9,6300,372,63240,NULL,149,0,0,NULL
+Seeds Sesame Flour High-Fat,Nuts and Seeds,526,37.1,30.78,26.62,NULL,NULL,0,5.196,159,15.17,423,361,69,3,0,0,0,NULL
+Dried Pumpkin And Squash Seeds,Nuts and Seeds,559,49.05,30.23,10.71,1.4,6,0,8.659,46,8.82,809,592,16,1,1.9,0,0,2.18
+Roasted Squash And Pumpkin Seeds (Salted),Nuts and Seeds,574,49.05,29.84,14.71,1.29,6.5,0,8.544,52,8.07,788,550,8,0,1.8,0,0,0.56
+Roasted Squash And Pumpkin Seeds (Unsalted),Nuts and Seeds,574,49.05,29.84,14.71,1.29,6.5,0,8.544,52,8.07,788,550,8,0,1.8,0,0,0.56
+Winged Beans Mature Seeds Raw,Beans and Lentils,409,16.32,29.65,41.71,NULL,25.9,0,2.303,440,13.44,977,179,0,0,0,0,0,NULL
+Pumpkin Seeds Salted,Nuts and Seeds,567,48.47,29.49,14.54,1.27,6.4,0,8.443,52,7.98,779,543,NULL,0,1.8,0,0,0.55
+Seeds Watermelon Seed Kernels Dried,Nuts and Seeds,557,47.37,28.33,15.31,NULL,NULL,0,9.779,54,7.28,648,515,0,0,0,0,0,NULL
+Peanuts All Types Oil-Roasted With Salt,Beans and Lentils,599,52.5,28.03,15.26,4.18,9.4,0,8.655,61,1.52,726,176,0,0,0.8,0,0,6.94
+Peanuts All Types Oil-Roasted Without Salt,Beans and Lentils,599,52.5,28.03,15.26,4.18,9.4,0,8.686,61,1.52,726,176,0,0,0.8,0,0,6.91
+Peanuts Spanish Oil-Roasted With Salt,Beans and Lentils,579,49.04,28.01,17.45,NULL,8.9,0,7.555,100,2.28,776,168,0,0,0,0,0,NULL
+Peanuts Spanish Oil-Roasted Without Salt,Beans and Lentils,579,49.04,28.01,17.45,NULL,8.9,0,7.555,100,2.28,776,168,0,0,0,0,0,NULL
+Peanuts Valencia Oil-Roasted With Salt,Beans and Lentils,589,51.24,27.04,16.3,NULL,8.9,0,7.894,54,1.65,612,160,0,0,0,0,0,NULL
+Peanuts Valencia Oil-Roasted Without Salt,Beans and Lentils,589,51.24,27.04,16.3,NULL,8.9,0,7.894,54,1.65,612,160,0,0,0,0,0,NULL
+Peanuts Spanish Raw,Beans and Lentils,570,49.6,26.15,15.83,NULL,9.5,0,7.098,106,3.91,744,188,0,0,0,0,0,NULL
+Broadbeans (Fava Beans) Mature Seeds Raw,Beans and Lentils,341,1.53,26.12,58.29,5.7,25,0,0.254,103,6.7,1062,192,53,3,1.4,0,0,0.05
+Peanut Butter Chunky Vitamin And Mineral Fortified,Beans and Lentils,593,51.47,26.06,17.69,10.94,5.7,0,7.972,45,17.5,744,370,3907,1172,0,0,0,43.2
+Peanut Butter Smooth Reduced Fat,Beans and Lentils,520,34,25.9,35.65,9.28,5.2,0,5.76,35,1.9,669,170,0,0,0,0,0,9.04
+Peanuts Virginia Oil-Roasted Without Salt,Beans and Lentils,578,48.62,25.87,19.86,NULL,8.9,0,6.345,86,1.67,652,188,0,0,0,0,0,NULL
+Peanuts Virginia Oil-Roasted With Salt,Beans and Lentils,578,48.62,25.87,19.86,NULL,8.9,0,6.345,86,1.67,652,188,0,0,0,0,0,NULL
+Raw Peanuts,Beans and Lentils,567,49.24,25.8,16.13,4.72,8.5,0,6.279,92,4.58,705,168,0,0,0,0,0,8.33
+Peanut Butter Smooth Vitamin And Mineral Fortified,Beans and Lentils,591,50.81,25.72,18.75,10.47,5.6,0,10.125,43,16.6,667,355,3907,1172,0,0,0,43.2
+Papad,Beans and Lentils,371,3.25,25.56,59.87,0,18.6,4,1.084,143,7.8,1000,271,50,13,0,0,0,0.05
+Beans Kidney Royal Red Mature Seeds Raw,Beans and Lentils,329,0.45,25.33,58.33,NULL,24.9,0,0.065,131,8.7,1346,138,8,0,4.5,0,0,NULL
+Mungo Beans Mature Seeds Raw,Beans and Lentils,341,1.64,25.21,58.99,NULL,18.3,0,0.114,138,7.57,983,267,23,1,0,0,0,NULL
+Peanuts Virginia Raw,Beans and Lentils,563,48.75,25.19,16.54,3.95,8.5,0,6.434,89,2.55,690,171,0,0,0,0,0,6.56
+Peanuts Valencia Raw,Beans and Lentils,570,47.58,25.09,20.91,NULL,8.7,0,7.329,62,2.09,332,184,0,0,0,0,0,NULL
+Butternuts (Dried),Nuts and Seeds,612,56.98,24.9,12.05,NULL,4.7,0,1.306,53,4.02,421,237,124,6,3.2,0,0,NULL
+Peanut Spread Reduced Sugar,Beans and Lentils,650,54.89,24.8,14.23,6.35,7.8,0,10.22,72,2.84,818,164,0,0,0,0,0,8.06
+Lentils Raw,Beans and Lentils,352,1.06,24.63,63.35,2.03,10.7,0,0.154,35,6.51,677,47,39,2,4.5,0,0,0.49
+Peanut Butter With Omega-3 Creamy,Beans and Lentils,608,54.17,24.47,17,3.11,6.1,NULL,9.691,45,1.67,780,191,NULL,NULL,NULL,NULL,NULL,10.34
+Beans Kidney California Red Mature Seeds Raw,Beans and Lentils,330,0.25,24.37,59.8,NULL,24.9,0,0.036,195,9.35,1490,160,8,0,4.5,0,0,NULL
+Peanuts All Types Dry-Roasted With Salt,Beans and Lentils,587,49.66,24.35,21.26,4.9,8.4,0,7.723,58,1.58,634,178,0,0,0,0,0,4.93
+Dry Roasted Peanuts,Nuts and Seeds,587,49.66,24.35,21.26,4.9,8.4,0,7.723,58,1.58,634,178,0,0,0,0,0,4.93
+Yardlong Beans Mature Seeds Raw,Beans and Lentils,347,1.31,24.33,61.91,NULL,11,0,0.339,138,8.61,1157,338,52,3,1.6,0,0,NULL
+Peanuts Dry Roasted Lightly Salted,Nuts and Seeds,584,49.41,24.23,21.15,4.88,8.4,0,7.685,58,1.57,631,177,NULL,0,0,0,0,4.9
+Peanut Butter (Chunk Style),Beans and Lentils,589,49.94,24.06,21.57,8.41,8,0,7.607,45,1.9,745,160,0,0,0,0,0,6.3
+Peanut Butter Chunk Style With Salt,Beans and Lentils,589,49.94,24.06,21.57,8.41,8,0,7.607,45,1.9,745,160,0,0,0,0,0,6.3
+Black Walnuts (Dried),Nuts and Seeds,619,59.33,24.06,9.58,1.1,6.8,0,3.483,61,3.12,523,201,40,2,1.7,0,0,2.08
+Peanut Butter Reduced Sodium,Beans and Lentils,590,49.9,24,21.83,9.29,6.6,0,7.716,41,1.9,747,159,0,0,0,0,0,9.05
+Lentils Pink Or Red Raw,Beans and Lentils,358,2.17,23.91,63.1,NULL,10.8,0,0.379,48,7.39,668,59,58,3,1.7,0,0,NULL
+Hyacinth Beans Mature Seeds Raw,Beans and Lentils,344,1.69,23.9,60.74,NULL,25.6,0,0.288,130,5.1,1235,283,0,0,0,0,0,NULL
+Mung Beans Mature Seeds Raw,Beans and Lentils,347,1.15,23.86,62.62,6.6,16.3,0,0.348,132,6.74,1246,189,114,6,4.8,0,0,0.51
+Cowpeas Catjang Mature Seeds Raw,Beans and Lentils,343,2.07,23.85,59.64,NULL,10.7,0,0.542,85,9.95,1375,333,33,2,1.5,0,0,NULL
+Chicken Meatless,Beans and Lentils,224,12.73,23.64,3.64,0,3.6,0,1.534,35,3.27,54,17,0,0,0,2.18,0,2.68
+Beans Kidney All Types Mature Seeds Raw,Beans and Lentils,333,0.83,23.58,60.01,2.23,24.9,0,0.12,143,8.2,1406,140,0,0,4.5,0,0,0.22
+Cowpeas Common (Blackeyes Crowder Southern) Mature Seeds Raw,Beans and Lentils,336,1.26,23.52,60.03,6.9,10.6,0,0.331,110,8.27,1112,184,50,3,1.5,0,0,0.39
+Peanut Butter Lower Sodium And Lower Sugar,Nuts and Seeds,624,53.12,23.5,18.27,8.42,6.4,0,10.272,60,2.29,688,166,NULL,0,0,0,0,8.58
+Beans White Mature Seeds Raw,Beans and Lentils,333,0.85,23.36,60.27,2.11,15.2,0,0.219,240,10.44,1795,190,0,0,0,0,0,0.21
+Nuts Mixed Nuts Dry Roasted With Peanuts Salt Added Planters Pistachio Blend,Nuts and Seeds,572,47.52,23.28,23.07,4.45,8.1,NULL,6.71,129,3.43,758,209,90,4,NULL,NULL,NULL,5.65
+Wheat Germ Crude,Grains and Pasta,360,9.72,23.15,51.8,NULL,13.2,0,1.665,39,6.26,892,239,0,0,0,0,0,NULL
+Peas Green Split Mature Seeds Raw,Beans and Lentils,364,3.89,23.12,61.63,3.14,22.2,0,0.408,46,4.73,852,63,149,7,1.8,0,0,0.12
+Beans Cranberry (Roman) Mature Seeds Raw,Beans and Lentils,335,1.23,23.03,60.05,NULL,24.7,0,0.316,127,5,1332,156,2,0,0,0,0,NULL
+Vegetarian Fillets,Beans and Lentils,290,18,23,9,0.8,6.1,0,2.849,95,2,600,23,0,0,0,4.2,0,3.45
+Mothbeans Mature Seeds Raw,Beans and Lentils,343,1.61,22.94,61.52,NULL,NULL,0,0.364,150,10.85,1191,381,32,2,4,0,0,NULL
+Beans Kidney Red Mature Seeds Raw,Beans and Lentils,337,1.06,22.53,61.29,2.1,15.2,0,0.154,83,6.69,1359,138,0,0,4.5,0,0,0.21
+Chickpea Flour (Besan),Beans and Lentils,387,6.69,22.39,57.82,10.85,10.8,0,0.693,45,4.86,846,166,41,2,0,0,0,0.83
+Beans Navy Mature Seeds Raw,Beans and Lentils,337,1.5,22.33,60.75,3.88,15.3,NULL,0.17,147,5.49,1185,175,0,0,NULL,0,0,0.02
+Unsalted Peanut Butter (Smooth),Beans and Lentils,598,51.36,22.21,22.31,10.49,5,0,10.325,49,1.74,558,168,0,0,0,0,0,9.1
+Peanut Butter Smooth Style With Salt,Beans and Lentils,598,51.36,22.21,22.31,10.49,5,0,10.325,49,1.74,558,168,0,0,0,0,0,9.1
+Beans Yellow Mature Seeds Raw,Beans and Lentils,345,2.6,22,60.7,NULL,25.1,0,0.671,166,7.01,1042,222,6,0,0,0,0,NULL
+Mixed Seeds,Nuts and Seeds,580,49.61,21.96,21.73,2.37,10,0,6.05,66,4.87,834,234,NULL,0,1.5,0,0,19.72
+Peanut Butter (Smooth),Beans and Lentils,588,49.54,21.93,23.98,6.5,5.7,0,9.519,54,2.16,592,179,0,0,0,0,0,5.94
+Beans Great Northern Mature Seeds Raw,Beans and Lentils,339,1.14,21.86,62.37,2.26,20.2,0,0.356,175,5.47,1387,189,0,0,5.3,0,0,0.22
+Spaghetti Protein-Fortified Dry Enriched (N X 6.25),Grains and Pasta,374,2.23,21.78,65.65,NULL,2.4,0,0.328,39,4.15,201,65,0,0,0,0,0,NULL
+Pigeon Peas (Red Gram) Mature Seeds Raw,Beans and Lentils,343,1.49,21.7,62.78,NULL,15,0,0.33,130,5.23,1392,183,28,1,0,0,0,NULL
+Beans Black Mature Seeds Raw,Beans and Lentils,341,1.42,21.6,62.36,2.12,15.5,0,0.366,123,5.02,1483,171,17,0,0,0,0,0.21
+Lima Beans Large Mature Seeds Raw,Beans and Lentils,338,0.69,21.46,63.38,8.5,19,0,0.161,81,7.51,1724,224,0,0,0,0,0,0.72
+Nuts Almonds Oil Roasted With Salt Added Smoke Flavor,Nuts and Seeds,607,55.89,21.43,17.86,3.57,10.7,0,3.571,286,3.86,679,286,0,NULL,0,NULL,NULL,25.13
+Beans Pinto Mature Seeds Raw,Beans and Lentils,347,1.23,21.42,62.55,2.11,15.5,0,0.235,113,5.07,1393,176,0,0,6.3,0,0,0.21
+Nuts Almonds Blanched,Nuts and Seeds,590,52.52,21.4,18.67,4.63,9.9,0,3.953,236,3.28,659,268,7,0,0,0,0,23.75
+Chicken Meatless Breaded Fried,Beans and Lentils,234,12.77,21.28,8.51,0,4.3,0,1.13,42,3.83,300,12,0,0,0,5.11,0,1.95
+Beans Black Turtle Mature Seeds Raw,Beans and Lentils,339,0.9,21.25,63.25,2.12,15.5,0,0.232,160,8.7,1500,160,17,0,0,0,0,0.21
+Nuts Almonds Oil Roasted Lightly Salted,Nuts and Seeds,607,55.17,21.23,17.68,4.55,10.5,0,4.207,291,3.68,699,274,1,NULL,0,0,NULL,25.97
+Nuts Almonds Oil Roasted With Salt Added,Nuts and Seeds,607,55.17,21.23,17.68,4.55,10.5,0,4.208,291,3.68,699,274,1,0,0,0,0,25.97
+Nuts Almonds Oil Roasted Without Salt Added,Nuts and Seeds,607,55.17,21.23,17.68,4.55,10.5,0,4.208,291,3.68,699,274,1,0,0,0,0,25.97
+Dried Chives,Vegetables,311,3.5,21.2,64.29,NULL,26.2,0,0.591,813,20,2960,640,68300,3415,660,0,0,NULL
+Almonds,Nuts and Seeds,579,49.93,21.15,21.55,4.35,12.5,0,3.802,269,3.71,733,270,2,0,0,0,0,25.63
+Beans Small White Mature Seeds Raw,Beans and Lentils,336,1.18,21.11,62.25,NULL,24.9,0,0.304,173,7.73,1542,183,0,0,0,0,0,NULL
+Dry Roasted Pistachio Nuts,Nuts and Seeds,572,45.82,21.05,28.28,7.74,10.3,0,5.645,107,4.03,1007,109,266,13,3,0,0,2.17
+Nuts Pistachio Nuts Dry Roasted With Salt Added,Nuts and Seeds,569,45.82,21.05,27.55,7.74,10.3,0,5.645,107,4.03,1007,109,266,13,3,0,0,2.17
+Meatballs Meatless,Beans and Lentils,197,9,21,8,1.25,4.6,0,1.425,25,2.16,180,18,0,0,0,1.5,0,1.73
+Vegetarian Meatloaf Or Patties,Beans and Lentils,197,9,21,8,1.2,4.6,0,1.425,29,2.1,180,18,0,0,0,2.4,0,1.73
+Beans Pink Mature Seeds Raw,Beans and Lentils,343,1.13,20.96,64.19,2.14,12.7,0,0.292,130,6.77,1464,182,0,0,0,0,0,0.21
+Almond Butter,Nuts and Seeds,614,55.5,20.96,18.82,4.43,10.3,0,4.152,347,3.49,748,279,1,0,0,0,0,24.21
+Nuts Almond Butter Plain With Salt Added,Nuts and Seeds,614,55.5,20.96,18.82,6.27,10.3,0,6.55,347,3.49,748,279,1,0,0,0,0,24.21
+Nuts Almonds Dry Roasted With Salt Added,Nuts and Seeds,598,52.54,20.96,21.01,4.86,10.9,0,4.092,268,3.73,713,279,1,0,0,0,0,23.9
+Dry Roasted Almonds,Nuts and Seeds,598,52.54,20.96,21.01,4.86,10.9,0,4.092,268,3.73,713,279,1,0,0,0,0,23.9
+Dried Sunflower Seeds,Nuts and Seeds,584,51.46,20.78,20,2.62,8.6,0,4.455,78,5.25,645,325,50,3,1.4,0,0,35.17
+Lima Beans Thin Seeded (Baby) Mature Seeds Raw,Beans and Lentils,335,0.93,20.62,62.83,8.32,20.6,0,0.219,81,6.19,1403,188,0,0,0,0,0,0.7
+Chickpeas (Garbanzo Beans Bengal Gram) Mature Seeds Raw,Beans and Lentils,378,6.04,20.47,62.95,10.7,12.2,0,0.603,57,4.31,718,79,67,3,4,0,0,0.82
+Seeds Sesame Seed Kernels Dried (Decorticated),Nuts and Seeds,631,61.21,20.45,11.73,0.48,11.6,0,9.055,60,6.36,370,345,66,3,0,0,0,1.68
+Pistachio Nuts Unsalted,Nuts and Seeds,581,47.44,20.42,27.43,7.51,10,0,5.886,104,3.91,977,106,NULL,13,2.9,0,0,2.46
+Almonds Unsalted,Nuts and Seeds,607,53.96,20.33,20.38,4.71,10.6,0,4.38,260,3.62,692,271,NULL,0,0,0,0,23.54
+Pistachio Nuts Lightly Salted,Nuts and Seeds,579,47.21,20.32,27.3,7.47,9.9,0,5.857,103,3.9,972,105,NULL,13,2.9,0,0,2.44
+Tempeh,Beans and Lentils,192,10.8,20.29,7.64,NULL,NULL,0,2.539,111,2.7,412,81,0,0,0,0.08,0,NULL
+Sausage Meatless,Beans and Lentils,255,18.16,20.28,8.09,0,2.8,0,2.926,63,3.72,231,36,0,0,0,0,0,2.1
+Pistachio Nuts Salted,Nuts and Seeds,576,46.98,20.22,27.16,7.43,9.9,0,5.828,103,3.88,967,105,NULL,12,2.9,0,0,2.43
+Pistachio Nuts,Nuts and Seeds,560,45.32,20.16,27.17,7.66,10.6,0,5.907,105,3.92,1025,121,516,26,5.6,0,0,2.86
+Almonds Salted,Nuts and Seeds,601,53.43,20.13,20.18,4.67,10.5,0,4.336,258,3.59,685,268,NULL,0,0,0,0,23.3
+Almonds Flavored,Nuts and Seeds,599,53.27,20.07,20.12,4.65,10.4,0,4.323,257,3.58,683,267,NULL,0,0,0,0,23.23
+Trail Mix With Nuts,Nuts and Seeds,600,52.82,20.06,21.18,4.1,8.1,0,7.288,88,3.2,649,205,NULL,0,0.6,0,0,9.89
+Seeds Sunflower Seed Kernels Oil Roasted With Salt Added,Nuts and Seeds,592,51.3,20.06,22.89,3.11,10.6,0,7.068,87,4.28,483,127,9,0,1.1,0,0,36.33
+Seeds Sunflower Seed Kernels Oil Roasted Without Salt,Nuts and Seeds,592,51.3,20.06,22.89,3.11,10.6,0,7.068,87,4.28,483,127,9,0,1.1,0,0,36.33
+Nuts Mixed Nuts Oil Roasted With Peanuts With Salt Added,Nuts and Seeds,607,53.95,20.04,21.05,4.15,7,0,8.711,117,2.61,632,229,3,0,0.5,0,0,7.82
+Nuts Mixed Nuts Oil Roasted With Peanuts Lightly Salted,Nuts and Seeds,607,53.95,20.04,21.05,4.15,7,0,8.711,117,2.61,632,229,3,0,0.5,0,0,7.82
+Nuts Mixed Nuts Oil Roasted With Peanuts Without Salt Added,Nuts and Seeds,607,53.95,20.04,21.05,4.15,7,0,8.711,117,2.61,632,229,3,0,0.5,0,0,7.82
+Tempeh Cooked,Beans and Lentils,195,11.38,19.91,7.62,NULL,NULL,NULL,3.4,96,2.13,401,77,NULL,NULL,NULL,0.14,0,NULL
+Beans Adzuki Mature Seeds Raw,Beans and Lentils,329,0.53,19.87,62.9,NULL,12.7,0,0.191,66,4.98,1254,127,17,1,0,0,0,NULL
+Mixed Nuts With Peanuts Unsalted,Nuts and Seeds,610,54.05,19.74,21.21,4.57,7.6,0,7.659,94,2.81,608,199,NULL,1,0.4,0,0,7.49
+Frankfurter Meatless,Beans and Lentils,233,13.73,19.61,7.7,0,3.9,0,1.653,33,1.41,98,18,0,0,0,2.35,0,1.92
+Nuts Nfs,Nuts and Seeds,605,53.62,19.59,21.04,4.53,7.6,0,7.598,93,2.79,603,197,NULL,1,0.4,0,0,7.43
+Mixed Nuts Nfs,Nuts and Seeds,605,53.62,19.59,21.04,4.53,7.6,0,7.598,93,2.79,603,197,NULL,1,0.4,0,0,7.43
+Dry-Roasted Mixed Nuts (Salted),Nuts and Seeds,607,53.5,19.5,22.42,5,6.4,0,8.01,87,3.73,643,227,4,0,0.8,0,0,6.13
+Natto,Beans and Lentils,211,11,19.4,12.68,4.89,5.4,0,1.591,217,8.6,729,115,0,0,13,0,0,0.01
+Seeds Sunflower Seed Kernels Dry Roasted With Salt Added,Nuts and Seeds,582,49.8,19.33,24.07,2.73,9,0,5.219,70,3.8,850,129,9,0,1.4,0,0,26.1
+Dry Roasted Sunflower Seeds,Nuts and Seeds,582,49.8,19.33,24.07,2.73,11.1,0,5.219,70,3.8,850,129,9,0,1.4,0,0,26.1
+Dry Roasted Sunflower Seeds (With Salt),Nuts and Seeds,546,49.8,19.33,15.31,2.73,9,0,5.219,70,3.8,850,129,9,0,1.4,0,0,26.1
+Sunflower Seeds Plain Salted,Nuts and Seeds,575,49.21,19.1,23.78,2.7,11,0,5.157,69,3.76,840,127,NULL,0,1.4,0,0,25.79
+Tofu Fried,Beans and Lentils,270,20.18,18.82,8.86,2.72,3.9,0,2.918,372,4.87,146,60,27,1,0,0,0,0.04
+Tofu Fried Prepared With Calcium Sulfate,Beans and Lentils,270,20.18,18.82,8.86,NULL,3.9,0,2.918,961,4.87,146,95,0,NULL,0,0,0,NULL
+Beans French Mature Seeds Raw,Beans and Lentils,343,2.02,18.81,64.11,NULL,25.2,0,0.221,186,3.4,1316,188,8,0,4.6,0,0,NULL
+Seeds Pumpkin And Squash Seeds Whole Roasted With Salt Added,Nuts and Seeds,446,19.4,18.55,53.75,NULL,18.4,0,3.67,55,3.31,919,262,62,3,0.3,0,0,NULL
+Roasted Squash And Pumpkin Seeds (With Shells),Nuts and Seeds,446,19.4,18.55,53.75,NULL,18.4,0,3.67,55,3.31,919,262,62,3,0.3,0,0,NULL
+Sunflower Seeds Flavored,Nuts and Seeds,567,47.54,18.45,25.93,5.55,10.6,0,4.983,67,3.64,812,123,NULL,0,1.3,0,0,24.92
+Flax Seeds,Nuts and Seeds,534,42.16,18.29,28.88,1.55,27.3,0,3.663,255,5.73,813,392,0,0,0.6,0,0,0.31
+Cashews (Raw),Nuts and Seeds,553,43.85,18.22,30.19,5.91,3.3,0,7.783,37,6.68,660,292,0,0,0.5,0,0,0.9
+Boiled Soybeans (Edamame),Beans and Lentils,172,8.97,18.21,8.36,3,6,0,1.297,102,5.14,515,86,9,0,1.7,0,0,0.35
+Soybeans Mature Seeds Cooked Boiled With Salt,Beans and Lentils,172,8.97,18.21,8.36,2.36,6,0,1.297,102,5.14,515,86,9,0,1.7,0,0,0.35
+Nuts Almonds Honey Roasted Unblanched,Nuts and Seeds,594,49.9,18.17,27.9,NULL,13.7,0,4.73,263,2.83,560,240,0,0,0.7,0,0,NULL
+Soybeans Dry Cooked Fat Not Added In Cooking,Beans and Lentils,171,8.92,18.1,8.31,2.98,6,0,1.29,102,5.11,512,86,NULL,0,1.7,0,0,0.35
+Seeds Sesame Butter Paste,Nuts and Seeds,586,50.87,18.08,24.05,NULL,5.5,0,7.124,960,19.2,582,362,50,3,0,0,0,NULL
+Nuts Mixed Nuts Dry Roasted With Peanuts Salt Added Chosen Roaster,Nuts and Seeds,608,53.2,18,24.62,3.9,7.1,NULL,7.023,106,3.22,585,202,NULL,NULL,NULL,NULL,NULL,NULL
+Seeds Sesame Butter Tahini From Unroasted Kernels (Non-Chemically Removed Seed Coat),Nuts and Seeds,607,56.44,17.95,17.89,NULL,9.3,0,7.904,141,6.35,459,353,67,3,0,0,0,NULL
+Peppers Sweet Red Freeze-Dried,Vegetables,314,3,17.9,68.7,40.77,21.3,0,0.447,134,10.4,3170,188,77261,3863,1900,0,0,4
+Nuts Mixed Nuts Oil Roasted Without Peanuts Lightly Salted,Nuts and Seeds,607,50,17.86,25,5.21,7.1,0,7.143,130,5.18,714,275,27,1,0.6,0,0,7.68
+Raw Sesame Butter (Tahini),Nuts and Seeds,570,48,17.81,26.19,NULL,9.3,0,6.722,420,2.51,414,96,67,3,0,0,0,NULL
+Luncheon Slices Meatless,Beans and Lentils,189,11.11,17.78,4.44,2.22,1.1,0,1.338,41,1.8,200,23,0,0,0,4,0,3
+Seeds Sesame Seeds Whole Dried,Nuts and Seeds,573,49.67,17.73,23.45,0.3,11.8,0,6.957,975,14.55,468,351,9,0,0,0,0,0.25
+Cashew Butter,Nuts and Seeds,587,49.41,17.56,27.57,NULL,2,0,9.763,43,5.03,546,258,0,0,0,0,0,NULL
+Seeds Sesame Butter Tahini Type Of Kernels Unspecified,Nuts and Seeds,592,53.01,17.4,21.5,NULL,4.7,0,7.423,141,4.42,459,95,67,3,4.2,0,0,NULL
+Oat Bran,Grains and Pasta,246,7.03,17.3,66.22,1.45,15.4,0,1.328,58,5.41,566,235,0,0,0,0,0,1.01
+Nuts Mixed Nuts Dry Roasted With Peanuts With Salt Added,Nuts and Seeds,594,51.45,17.3,25.35,4.8,9,0,6.5,70,3.7,693,225,5,0,0.4,0,0,10.94
+Seeds Sunflower Seed Butter With Salt Added,Nuts and Seeds,617,55.2,17.28,23.32,10.54,5.7,0,4.678,64,4.12,576,311,52,NULL,2.7,0,0,22.89
+Seeds Sunflower Seed Butter Without Salt,Nuts and Seeds,617,55.2,17.28,23.32,10.54,5.7,0,4.678,64,4.12,576,311,52,NULL,2.7,0,0,22.89
+Firm Tofu,Beans and Lentils,144,8.72,17.27,2.78,NULL,2.3,0,1.261,683,2.66,237,58,166,NULL,0.2,0,0,NULL
+Seeds Sunflower Seed Kernels Toasted With Salt Added,Nuts and Seeds,619,56.8,17.21,20.59,NULL,11.5,0,5.953,57,6.81,491,129,0,0,1.4,0,0,NULL
+Seeds Sunflower Seed Kernels Toasted Without Salt,Nuts and Seeds,619,56.8,17.21,20.59,NULL,11.5,0,5.953,57,6.81,491,129,0,0,1.4,0,0,NULL
+Sesame Butter (Tahini),Nuts and Seeds,595,53.76,17,21.19,0.49,9.3,0,7.529,426,8.95,414,95,67,3,0,0,0,0.25
+Mixed Nuts Unroasted,Nuts and Seeds,606,54.13,16.96,23.17,4.66,7.6,0,7.024,139,4.3,639,239,NULL,1,0.9,0,0,9.68
+Seeds Sesame Seed Kernels Toasted With Salt Added (Decorticated),Nuts and Seeds,567,48,16.96,26.04,0.48,16.9,0,6.722,131,7.78,406,346,66,3,0,0,0,0.25
+Seeds Sesame Seed Kernels Toasted Without Salt Added (Decorticated),Nuts and Seeds,567,48,16.96,26.04,0.48,16.9,0,6.722,131,7.78,406,346,66,3,0,0,0,0.25
+Seeds Sesame Meal Partially Defatted,Nuts and Seeds,567,48,16.96,26.04,NULL,NULL,0,6.722,153,14.55,406,346,66,3,0,0,0,NULL
+Sesame Seeds (Toasted),Nuts and Seeds,565,48,16.96,25.74,NULL,14,0,6.722,989,14.76,475,356,9,0,0,0,0,NULL
+Uncooked Oats,Grains and Pasta,389,6.9,16.89,66.27,NULL,10.6,0,1.217,54,4.72,429,177,0,0,0,0,0,NULL
+Nuts Cashew Nuts Oil Roasted With Salt Added,Nuts and Seeds,581,47.77,16.84,30.16,5.01,3.3,0,8.478,43,6.05,632,273,0,0,0.3,0,0,0.92
+Oil Roasted Cashews,Nuts and Seeds,580,47.77,16.84,29.87,5.01,3.3,0,8.478,43,6.05,632,273,0,0,0.3,0,0,0.92
+Soybeans Dry Cooked Fat Added In Cooking,Beans and Lentils,223,15.57,16.78,7.7,2.76,5.5,0,2.194,94,4.75,475,79,NULL,0,1.6,0,0,1.18
+Soybeans Dry Cooked Ns As To Fat Added In Cooking,Beans and Lentils,223,15.57,16.78,7.7,2.76,5.5,0,2.194,94,4.75,475,79,NULL,0,1.6,0,0,1.18
+Chia Seeds,Nuts and Seeds,486,30.74,16.54,42.12,NULL,34.4,0,3.33,631,7.72,407,335,54,NULL,1.6,0,NULL,0.5
+Mixed Nuts Without Peanuts Unsalted,Nuts and Seeds,615,55.54,16.44,22.46,4.52,7.4,0,7.228,135,4.17,620,231,NULL,1,0.9,0,0,9.74
+Mixed Nuts Without Peanuts Salted,Nuts and Seeds,610,55.09,16.31,22.28,4.48,7.3,0,7.169,134,4.14,615,229,NULL,1,0.9,0,0,9.66
+Safflower Seeds,Nuts and Seeds,517,38.45,16.18,34.29,NULL,NULL,0,3.682,78,4.9,687,353,50,3,0,0,0,NULL
+Rye Flour Dark,Grains and Pasta,325,2.22,15.91,68.63,2.31,23.8,0,0.269,37,4.97,717,160,11,1,0,0,0,2.73
+Veggie Burgers,Beans and Lentils,177,6.3,15.7,14.27,1.07,4.9,5,1.44,136,2.41,333,56,16,1,4.5,2.01,0,0.23
+Boiled Lupin Beans,Beans and Lentils,119,2.92,15.57,9.88,NULL,2.8,0,0.346,51,1.2,245,54,7,0,1.1,0,0,NULL
+Lupin Beans (Cooked),Beans and Lentils,116,2.92,15.57,9.29,NULL,2.8,0,0.346,51,1.2,245,54,0,0,1.1,0,0,NULL
+Wheat Bran Crude,Grains and Pasta,216,4.25,15.55,64.51,0.41,42.8,0,0.63,73,10.57,1182,611,9,0,0,0,0,1.49
