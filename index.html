@@ -174,7 +174,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
 	console.log(data[1])
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 1000])
+    .domain([0, 100])
     .range([ 0, width ])
   Svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -183,7 +183,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 100])
+    .domain([0, 1000])
     .range([ height, 0])
     .nice()
   Svg.append("g")
@@ -211,7 +211,7 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
   // Color scale: give me a specie name, I return a color
   var color = d3.scaleOrdinal()
     .domain(["Beans and Lentils", "Vegetables", "Fruits","Grains and Pasta", "Nuts and Seeds", "Fish","Dairy and Egg Products","Meats", "Fats and Oils" ])
-    .range([ "#00CC00","#00CC00","#00CC00", "#00CC00","#00CC00","#CC0000", "#CC0000","#CC0000","#8FD175"])
+    .range([ "#00CC00","#00CC00","#00CC00", "#00CC00","#00CC00","#CC0000", "#CC0000","#CC0000","#C0C0C0"])
 
   // Add dots
   Svg.append('g')
@@ -219,10 +219,10 @@ d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/
     .data(data)
     .enter()
     .append("circle")
-      .attr("cx", function (d) { return x(d.Calories); } )
-      .attr("cy", function (d) { return y(d.Protein); } )
+      .attr("cx", function (d) { return x(d.Protein); } )
+      .attr("cy", function (d) { return y(d.Calories); } )
       .attr("r", 1)
-      .style("fill", function (d) { return color(d.Calories) } )
+      .style("fill", function (d) { return color(d.Food_Group) } )
       
       
   // create a list of keys
@@ -231,7 +231,7 @@ var keys = ["Plant-based", "Animal Products", "Fats/Oils"]
 // Usually you have a color scale in your chart already
 var color = d3.scaleOrdinal()
   .domain(keys)
-  .range(d3.schemeSet1);
+  .range(["#00CC00","#CC0000" ,"#C0C0C0"]);
 
 // Add one dot in the legend for each name.
 var size = 20
@@ -268,17 +268,12 @@ Svg.selectAll("mylabels")
 
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v6.js"></script>
-
-<div class="w3-container" id="bubble_chart" style="margin-top:75px">
-  <h1 class="w3-xxxlarge w3-text-red"><b>bubble_chart.</b></h1>
-  <hr style="width:50px;border:5px solid red" class="w3-round">
-  <p>Some text our prices.</p>
-
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v6.js"></script>
         
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
 
 <script>
+
 // append the svg3 object to the body of the page
 const svg3 = d3.select("#bubble_chart")
 .append("svg")
@@ -286,14 +281,14 @@ const svg3 = d3.select("#bubble_chart")
   .attr("height", 460)
 
 // Read data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/11_SevCatOneNumNestedOneObsPerGroup.csv").then( function(data) {
+d3.csv("https://raw.githubusercontent.com/shirleyli2015/narrative_viz.github.io/master/data/MyFoodData_Nutrition_Facts_SpreadSheet_3.csv").then( function(data) {
 
 // Filter a bit the data -> more than 1 million inhabitants
-data = data.filter(function(d){ return d.value>10000000 })
+data = data.filter(function(d){ return d['Protein (g)']>10 })
 
 // Color palette for continents?
 const color = d3.scaleOrdinal()
-  .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"])
+  .domain(["Beans and Lentils", "Vegetables", "Fruits","Grains and Pasta", "Nuts and Seeds"])
   .range(d3.schemeSet1);
 
 // Size scale for countries
@@ -302,7 +297,7 @@ const size = d3.scaleLinear()
   .range([7,55])  // circle will be between 7 and 55 px wide
 
 // create a tooltip
-const Tooltip = d3.select("#my_dataviz")
+const Tooltip = d3.select("#bubble_chart")
   .append("div")
   .style("opacity", 0)
   .attr("class", "tooltip")
@@ -319,7 +314,7 @@ const mouseover = function(event, d) {
 }
 const mousemove = function(event, d) {
   Tooltip
-    .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
+    .html('<u>' + d.Name + '</u>' + "<br>" + d['Protein (g)'] + " inhabitants")
     .style("left", (event.x/2+20) + "px")
     .style("top", (event.y/2-30) + "px")
 }
@@ -334,10 +329,10 @@ var node = svg3.append("g")
   .data(data)
   .join("circle")
     .attr("class", "node")
-    .attr("r", d => size(d.value))
+    .attr("r", d => size(d['Protein (g)']))
     .attr("cx", width / 2)
     .attr("cy", height / 2)
-    .style("fill", d => color(d.region))
+    .style("fill", d => color(d.Food_Group))
     .style("fill-opacity", 0.8)
     .attr("stroke", "black")
     .style("stroke-width", 1)
